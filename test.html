@@ -1,0 +1,29 @@
+<select id="qrtest">
+  <option value="0">Classic</option>
+  <option value="1">Ecc level 4</option>
+  <option value="2">size 100</option>
+  <option value="3">Round</option>
+  <option value="4">Bevel</option>
+  <option value="5">Mitered Squares</option>
+  <option value="6">Colored Patterns</option>
+  <option value="7">Colored Squares</option>
+  <option value="8">Background</option>
+
+  <option value="9">Frame</option>
+</select>
+<br />
+<input id="intensity" type="number" name="intensity" min="0" max="10" value="5">
+<br />
+<input id="colorOne" type="color" name="colorOne">
+<input id="colorTwo" type="color" name="colorTwo">
+<input id="colorThree" type="color" name="colorThree">
+<br />
+<textarea id="qrinput" size="2953">Hello World!</textarea>
+<br />
+<input type="button" value="Submit" onclick="generate()"/>
+<div id="qrcode" ></div>
+
+<script type="text/javascript">
+  var qrcodesvg 	= new Qrcodesvg( "http:www.qrlicious.com", "qrcode", 420);
+  qrcodesvg.draw();
+</script>
