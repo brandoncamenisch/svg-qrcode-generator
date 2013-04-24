@@ -31,7 +31,7 @@ class SVGQRcode {
   	wp_enqueue_script( 'jquery' );
     global $pagenow, $typenow;
 
-		if ( is_page('free-qrcode-generator' ) ){
+		if ( is_single('svg-qrcode-generator' ) ){
     	wp_register_script( 'qrlicious_raphael', plugins_url('/lib/raphael/raphael-min.js', __FILE__) );
     	wp_enqueue_script( 'qrlicious_raphael' );
 
@@ -52,7 +52,8 @@ class SVGQRcode {
   }
 
 	public function shortcode() {
-  	include QRLICIOUS_SVGQRCODE_PATH.'test.html';
+  	$var = file_get_contents( QRLICIOUS_SVGQRCODE_PATH.'test.html' );
+  	return $var;
   }
 
 

@@ -1,4 +1,7 @@
-<select id="qrtest">
+<div class="row-fluid">
+  <div id="qrcode" class="tc"></div>
+  <label>Style:</label>
+  <select id="qrtest" class="span12">
   <option value="0">Classic</option>
   <option value="1">Ecc level 4</option>
   <option value="2">size 100</option>
@@ -8,22 +11,16 @@
   <option value="6">Colored Patterns</option>
   <option value="7">Colored Squares</option>
   <option value="8">Background</option>
-
-  <option value="9">Frame</option>
-</select>
-<br />
-<input id="intensity" type="number" name="intensity" min="0" max="10" value="5">
-<br />
-<input id="colorOne" type="color" name="colorOne">
-<input id="colorTwo" type="color" name="colorTwo">
-<input id="colorThree" type="color" name="colorThree">
-<br />
-<textarea id="qrinput" size="2953">Hello World!</textarea>
-<br />
-<input type="button" value="Submit" onclick="generate()"/>
-<div id="qrcode" ></div>
-
-<script type="text/javascript">
-  var qrcodesvg 	= new Qrcodesvg( "http:www.qrlicious.com", "qrcode", 420);
+  <option value="9" class="span12">Frame</option>
+  </select>
+  <label>Intensity:</label><input id="intensity" class="span12" type="number" name="intensity" min="0" max="10" value="5">
+  <label>Data:</label><textarea id="qrinput" class="span12" size="2953">Hello World!</textarea>
+  <label>Colors:</label><input id="colorOne" type="color" name="colorOne" class="span12">
+  <input id="colorTwo" type="color" name="colorTwo" class="span12">
+  <input id="colorThree" type="color" name="colorThree" class="span12">
+  <input class="btn btn-success btn-large btn-block" type="button" value="Generate an awesome code" onclick="generate()"/>
+  <script type="text/javascript">
+  var qrcodesvg 	= new Qrcodesvg( "http:www.brandoncamenisch.com", "qrcode", 420);
   qrcodesvg.draw();
-</script>
+  </script>
+</div>
